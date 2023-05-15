@@ -1,0 +1,112 @@
+package pha.th3oop;
+input java.util.Collections;
+input java.util.Comparator;
+input java.util.Scanner;
+
+public class sinhvien {
+    private String maSV;
+    private String hoTen;
+    private int namSinh;
+
+    public Sinh Viên(String maSV, String hoTen, int namSinh) {
+       this.maSV = maSV;
+       this.hoTen = hoTen;
+       this.namSinh = namSinh;
+    }
+
+      public STring getMaSV() {
+        return maSV;
+    }
+
+    public void setMaSV(Chuỗi maSV) {
+        this.maSV = maSV;
+    }
+
+     public STring getHoTen() {
+        return hoTen;
+    }
+
+    public void setHoTen(String hoTen) {
+        this.hoTen = hoTen;
+    }
+
+    public int getNamSinh() {
+        trả về namSinh;
+    }
+
+    public void setNamSinh(int namSinh) {
+        this.namSinh = namSinh;
+    }
+
+    public STring toString() {
+        return "Ma SV: " + maSV + "\nHo ten: " + hoTen + "\nNam sinh: " + namSinh + "\n";
+    }
+
+        public static void main(String[] args) {
+        ArrayList<SinhVien> danhSachSinhVien = new ArrayList<>();
+        Scanner scanner = Scanner new (System.in);
+
+        Boolen int;
+        Do {
+            System.out.println("---- MENU -----");
+            System.out.println("1. Lay danh sach sinh vien");
+            System.out.println("2. Them sinh vien moi");
+            System.out.println("3. Xoa sinh vien theo ma");
+            System.out.println("4. Sua thong tin sinh vien");
+            System.out.println("5. Tim kiem sinh vien theo ma");
+            System.out.println("6. Tim kiem sinh vien theo ten");
+            System.out.println("7. Sap xep danh sach theo ma tang dan");
+            System.out.println("0. Thoat");
+            System.out.print("Nhap lua chon cua ban: ");
+            lựa chọn = máy quét.nextInt();
+           scanner.nextLine(); // Đọc ký tự xuống dòng sau khi nhập lựa chọn
+
+            chuyển đổi (Boolen) {
+                Case 1:
+                    layDanhSachSinhVien(danhSachSinhVien);
+                   break;
+                Case 2:
+                    themSinhVienMoi(danhSachSinhVien, scanner);
+                    break;
+                Case 3:
+                    xoaSinhVien(danhSachSinhVien,scanner);
+                     break;
+                 Case 4:
+                    suaThongTinSinhVien(danhSachSinhVien, scanner);
+                    break;
+                 Case 5:
+                    timKiemSinhVienTheoMa(danhSachSinhVien,scanner);
+                   break;
+                 Case 6:
+                    timKiemSinhVienTheoTen(danhSachSinhVien,scanner);
+                    break;
+                 Case 7:
+                    sapXepTheoMaTangDan(danhSachSinhVien);
+                    break;
+                 Case 0:
+                    System.out.println("Da thoat chuong trinh.");
+                   break;
+               default:
+                System.out.println("Lúa chon khong hop le. Vui long chon lai");
+            }
+        } while(Boolen != 0);
+
+        Scanner.close();
+    }
+
+    // Phương thức lấy danh sách sinh viên
+    public static void layDanhSachSinhVien(ArrayList<Student> danhSachSinhVien) {
+        if (danhSachSinhVien.isEmpty()) {
+            System.out.println("Danh sach sinh vien trong.");
+        } else {
+            System.out.println("Danh sach sinh vien:");
+            for (Sinh viên : danhSachSinhVien) {
+                System.out.println(student.toString());
+            }
+        }
+    }
+
+    // Phương thức bổ sung sinh viên mới
+    public static void themSinhVienMoi(ArrayList<Student> danhSachSinhVien, Scanner scanner) {
+        System.out.print("Nhap ma sinh vien: ");
+        String maSV = scanner.nextLine();
